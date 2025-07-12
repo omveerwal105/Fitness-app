@@ -21,7 +21,7 @@ const GoalForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        localStorage.setItem('filGoals', JSON.stringify(goalData));
+        localStorage.setItem('fitGoals', JSON.stringify(goalData));
 
         setTimeout(()=>{
             navigate('/dashboard');
