@@ -26,10 +26,22 @@ const Dashboard = () => {
       <p><strong>Height:</strong> {goal.height} cm</p>
       <p><strong>Weight:</strong> {goal.weight} kg</p>
 
+      <button
+        className="btn btn-danger mt-3"
+        onClick={() => {
+          localStorage.removeItem('fitGoals');
+          setGoal(null);
+        }}
+      >
+        🔁 Reset My Goal
+      </button>
+
+
       <div className='mt-4'>
         <Link to="/workout-plan" className="btn btn-outline-primary">
           View Workout Plan
         </Link>
+
       </div>
     </div>
   );
